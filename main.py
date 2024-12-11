@@ -14,8 +14,7 @@ SYSTEMS = {
     "deflector_shield": "SHLD-05"
 }
 
-# Variable global para mantener el sistema dañado consistente
-current_damaged_system = None
+current_damaged_system = 'navigation'
 
 # Template HTML básico
 HTML_TEMPLATE = """
