@@ -93,8 +93,8 @@ def get_phase_change_values():
                      factor * (math.log(CRITICAL_POINT['specific_volume']) - math.log(REFERENCE_POINT['specific_volume_vapor']))
 
         return jsonify({
-            "specific_volume_liquid": round(math.exp(log_v_liquid), 4),
-            "specific_volume_vapor": round(math.exp(log_v_vapor), 4)
+            "specific_volume_liquid": math.exp(log_v_liquid),
+            "specific_volume_vapor": math.exp(log_v_vapor)
         })
 
     except (ValueError, TypeError):
